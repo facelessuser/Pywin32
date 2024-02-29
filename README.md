@@ -1,5 +1,14 @@
-Pywin32
+Pywin32 (Deprecated)
 =======
+
+This package was deprecated in favor of the [`pywin32` library](https://pypi.org/project/pywin32/#files),
+which your package can depend on 
+and Package Control will install accordingly.
+See https://packagecontrol.io/docs/dependencies on how to use specify a dependency on this library
+(previously called "dependency")
+in your package.
+
+---
 
 Pywin32 support for sublime (win32api etc)
 

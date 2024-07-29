@@ -83,7 +83,7 @@ def SmartOpenService(hscm, name, access):
 def LocateSpecificServiceExe(serviceName):
     # Given the name of a specific service, return the .EXE name _it_ uses
     # (which may or may not be the Python Service EXE
-    hkey = win32api.RegOpenKey(win32con.HKEY_LOCAL_MACHINE, "SYSTEM\\CurrentControlSet\\Services\\%s" % (serviceName), 0, win32con.KEY_ALL_ACCESS)
+    hkey = win32api.RegOpenKey(win32con.HKEY_LOCAL_MACHINE, "SYSTEM\\CurrentControlSet\\Services\\%s" % (serviceName), 0, win32con.KEY_READ)
     try:
         return win32api.RegQueryValueEx(hkey, "ImagePath")[0]
     finally:
